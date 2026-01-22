@@ -13,35 +13,14 @@ def divide(a, b):
     return a / b
 
 
-while True:
-    print("\n==== Simple Calculator ====")
-    print("1. Addition")
-    print("2. Subtraction")
-    print("3. Multiplication")
-    print("4. Division")
-    print("5. Exit")
+# Predefined values
+num1 = 20
+num2 = 10
 
-    choice = input("Enter your choice (1-5): ")
+print("==== Automatic Calculator ====")
+print("Numbers:", num1, "and", num2)
 
-    if choice == '5':
-        print("Exiting calculator. Goodbye!")
-        break
-
-    if choice in ['1', '2', '3', '4']:
-        try:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-        except ValueError:
-            print("Invalid input! Please enter numbers only.")
-            continue
-
-        if choice == '1':
-            print("Result:", add(num1, num2))
-        elif choice == '2':
-            print("Result:", subtract(num1, num2))
-        elif choice == '3':
-            print("Result:", multiply(num1, num2))
-        elif choice == '4':
-            print("Result:", divide(num1, num2))
-    else:
-        print("Invalid choice! Please select from 1 to 5.")
+print("Addition:", add(num1, num2))
+print("Subtraction:", subtract(num1, num2))
+print("Multiplication:", multiply(num1, num2))
+print("Division:", divide(num1, num2))
